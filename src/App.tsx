@@ -1,25 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box, Button, Grid, Typography } from '@mui/material';
+import { riceMenu, proteinMenu, toppingsMenu } from './lib/MenuItems';
+import Menu from './Menu';
+import InvoiceTable from './InvoiceTable';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid direction="row" sx={{display:"flex", flexWrap:"nowrap"}}>
+      <Menu/>
+      <InvoiceTable/>
+    </Grid>
   );
 }
 
