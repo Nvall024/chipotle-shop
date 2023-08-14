@@ -1,21 +1,24 @@
 import React from 'react';
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Grid, Typography, Checkbox } from '@mui/material';
 import { riceMenu, proteinMenu, toppingsMenu } from './lib/MenuItems';
 
 function Menu() {
   return (
-    <Grid item container direction='column' sx={{ backgroundColor: "white", flexGrow: 2}}>
-        <Grid item sx={{mt:"2rem"}}>
-          <Typography variant='h2' sx={{color:"#AB2218"}}>Welcome to Chipotle</Typography>
+    <Grid item container direction='column' sx={{ backgroundColor: "white", width:"700px", p:"2rem"}}>
+        <Grid item sx={{py:"1rem"}}>
+          <Typography variant='h5' sx={{color:"#AB2218"}}>Welcome to Chipotle</Typography>
+        </Grid>
+        <Grid item sx={{py:"1rem"}}>
           <Typography>Menu Items</Typography>
         </Grid>
         <Grid item container direction="row">
-          <Grid item direction="column" sx={{flexGrow: 1, ml:"2rem"}}>
+          <Grid item direction="column" sx={{flexGrow: 1}}>
             <Typography sx={{ml:"1rem"}}>Protein</Typography>
              {proteinMenu.map((item: string) => 
-             <Box sx={{border: "0.25px solid", m:"1rem", p:"1rem"}}>
+             <Grid item sx={{border: "0.25px solid", m:"1rem", p:"1rem"}}>
+              <Checkbox/>
               <Typography>{item}</Typography>
-             </Box>
+             </Grid>
              )}
            </Grid>
           <Grid item direction="column" sx={{flexGrow: 1}}>
@@ -26,7 +29,7 @@ function Menu() {
              </Box>
             )}
           </Grid>
-           <Grid item direction="column" sx={{flexGrow: 1, mr:"2rem"}}>
+           <Grid item direction="column" sx={{flexGrow: 1}}>
             <Typography sx={{ml:"1rem"}}>Toppings</Typography>
              {toppingsMenu.map((item: string) => 
              <Box sx={{border: "0.25px solid", m:"1rem", p:"1rem"}}>

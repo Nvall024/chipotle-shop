@@ -6,7 +6,7 @@ import InvoiceTable from './InvoiceTable';
 
 function App() {
   return (
-    <Grid direction="row" sx={{display:"flex", flexWrap:"nowrap"}}>
+    <Grid container direction="row" sx={{display:"flex", flexWrap:"nowrap"}}>
       <Menu/>
       <InvoiceTable/>
     </Grid>
