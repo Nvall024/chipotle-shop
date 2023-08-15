@@ -2,6 +2,8 @@
 import { Divider, Button, Grid, Typography } from '@mui/material';
 
 function InvoiceTable() {
+
+  
   return (
     <Grid item container direction='column' sx={{ backgroundColor: "white", width:"300px", ml:"2rem"}}>
       <Grid item sx={{my:"2rem", mx:"1rem"}}>

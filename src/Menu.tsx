@@ -3,6 +3,9 @@ import { Box, Grid, Typography, Checkbox } from '@mui/material';
 import { riceMenu, proteinMenu, toppingsMenu } from './lib/MenuItems';
 
 function Menu() {
+
+  
+
   return (
     <Grid item container direction='column' sx={{ backgroundColor: "white", width:"700px", p:"2rem"}}>
         <Grid item sx={{py:"1rem"}}>
